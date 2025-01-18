@@ -32,11 +32,9 @@ export const HTTP = (
 
   const { control, handleSubmit, register } = useForm<FormData>({
     defaultValues: {
-      ip: ["client.meshtastic.org", "localhost"].includes(
-          globalThis.location.hostname,
-        )
-        ? "meshtastic.local"
-        : globalThis.location.host,
+      ip: globalThis.location.host +
+        (new URLSearchParams(globalThis.location.search).get("path") ||
+          "/meshtastic/web"),
       tls: isURLHTTPS ? true : false,
     },
   });
