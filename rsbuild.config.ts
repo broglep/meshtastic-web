@@ -27,4 +27,20 @@ export default defineConfig({
   html: {
     title: "Meshtastic Web",
   },
+  output: {
+    distPath: {
+      root: 'build',
+      html: 'meshtastic/web',
+      js: 'meshtastic/web/js',
+      jsAsync:'meshtastic/web/js/async',
+      css: 'meshtastic/web/css',
+      cssAsync: 'meshtastic/web/css/async',
+      svg: 'meshtastic/web/svg',
+      font: 'meshtastic/web/font',
+      wasm: 'meshtastic/web/wasm',
+      image: 'meshtastic/web/image',
+      media: 'meshtastic/web/media',
+      assets: 'meshtastic/web/assets',
+    },
+  }
 });

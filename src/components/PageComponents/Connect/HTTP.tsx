@@ -19,11 +19,7 @@ export const HTTP = ({ closeDialog }: TabElementProps): JSX.Element => {
     tls: boolean;
   }>({
     defaultValues: {
-      ip: ["client.meshtastic.org", "localhost"].includes(
-        window.location.hostname,
-      )
-        ? "meshtastic.local"
-        : window.location.hostname,
+      ip: window.location.host + (new URLSearchParams(window.location.search).get("path") || "/meshtastic/web"),
       tls: location.protocol === "https:",
     },
   });
