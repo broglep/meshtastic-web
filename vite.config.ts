@@ -18,6 +18,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      disable: true,
       registerType: 'autoUpdate',
       strategies: 'generateSW',
       devOptions: {
@@ -48,4 +49,5 @@ export default defineConfig({
       "Cross-Origin-Embedder-Policy": "require-corp",
     },
   },
+  base: "/meshtastic/web"
 });
