@@ -33,6 +33,7 @@ export default defineConfig(({ mode }) => {
   const isTest = env.VITE_IS_TEST;
 
   return {
+    base: "/meshtastic/web",
     plugins: [
       react(),
       tailwindcss(),
